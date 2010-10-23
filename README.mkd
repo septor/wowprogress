@@ -11,20 +11,29 @@ If you are not comfortable with doing this you will need to wait until I push a 
 
 Allows you to show off which kills your guild has made.
 
+# FAQ
+
+That aren't really frequently asked (yet).
 
 ## How will this work?
 
-Administrering this menu will be as simple as:
+Administering this menu will be as simple as:
 
-* Adding an Instance.
-* Add bosses to the Instance.
+* Adding an instance.
+* Add bosses to the instance.
 * Define whether or not the Instance has a hardmode/heroic setting.
 
 That's it.
 
---
-
 Managing your kills will be as simple as clicking one of two buttons (default "kill status" is *not killed*); **Attempting** or **Killed**. The rest will be self managed by the plugin.
+
+
+## Will it come preloaded with instances and bosses?
+
+0.1 will have ICC and Ruby Sanctum. Cataclysm raids will be added when Cataclysm is released. Older raids will be added in time.
+
+The ability to add instances and bosses will be there as well so you don't have wait for me to add them. In regards to "will my stuff get overwritten?" the answer is no,
+so long as you follow the naming scheme found on [wowhead.com](http://wowhead.com/).
 
 ## Translations
 
