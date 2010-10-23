@@ -7,9 +7,24 @@ If you are not comfortable with doing this you will need to wait until I push a 
 
 # WoW Progression Menu
 
+**NOTE: This plugin has yet to be started. It's next on the list of things to do.**
+
 Allows you to show off which kills your guild has made.
 
-**NOTE: This plugin has yet to be started. It's next on the list of things to do.**
+
+## How will this work?
+
+Administrering this menu will be as simple as:
+
+* Adding an Instance.
+* Add bosses to the Instance.
+* Define whether or not the Instance has a hardmode/heroic setting.
+
+That's it.
+
+--
+
+Managing your kills will be as simple as clicking one of two buttons (default "kill status" is *not killed*); **Attempting** or **Killed**. The rest will be self managed by the plugin.
 
 ## Translations
 
