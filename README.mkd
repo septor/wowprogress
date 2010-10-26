@@ -1,7 +1,7 @@
 
 # IMPORTANT!!!
 
-Before this plugin or menu item will work correctly with e107 you will need to rename the directory you're presented with to `wowprogress_menu`.
+Before this plugin or menu item will work correctly with e107 you will need to rename the directory you're presented with to `wowprogress`.
 If you are not comfortable with doing this you will need to wait until I push a release to [plugins.e107](http://plugins.e107.org/).
 
 
@@ -32,9 +32,10 @@ Managing your kills will be as simple as clicking one of two buttons (default "k
 
 0.1 will have ICC and Ruby Sanctum. Cataclysm raids will be added when Cataclysm is released. Older raids will be added in time.
 
-The ability to add instances and bosses will be there as well so you don't have wait for me to add them. In regards to "will my stuff get overwritten?" the answer is no,
-so long as you follow the naming scheme found on [wowhead.com](http://wowhead.com/).
+Instances and bosses will be added to a datapack file that will "install" them to the database tables. In the event that you do not want to wait for a particular boss or instance
+to be added to the datapack you can manually add either at anytime. So long as you follow the naming/id scheme on wowhead.com nothing will get erased. In mentioning the datapack file
+it will be recommended that it get ran each time it gets updated so that you have the latest boss/instance list installed.
 
-## Translations
+# Translations
 
 If you would like to translate this plugin, post the translations on [paste2.org](http://paste2.org/) and [PM](http://e107.org/e107_plugins/pm/pm.php?send.37) me the URL generated.
