@@ -5,6 +5,7 @@ if(!defined("e107_INIT")) {
 }
 
 // data pack version, format is ddmmyyyy
+// number represents the date an instance or boss was added NOT when code is updated
 $dpversion = "10232010";
 
 // instance format is: "instance name" => array(zone id, has heroic)
