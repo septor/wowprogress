@@ -1,8 +1,8 @@
 
 # IMPORTANT!!!
 
-Before this plugin or menu item will work correctly with e107 you will need to rename the directory you're presented with to `wowprogress`.
-If you are not comfortable with doing this you will need to wait until I push a release to [plugins.e107](http://plugins.e107.org/).
+Before this plugin or menu item will work correctly with e107 you will need to rename the directory you're presented with to `wowprogress`. In most cases this can be done
+inside the archieve program you use to decompress the tar/zipball.
 
 
 # WoW Progression Menu
@@ -19,18 +19,21 @@ That aren't really frequently asked (yet).
 
 Administering this menu will be as simple as:
 
-* Adding an instance.
-* Add bosses to the instance.
+* Adding an instance.**+**
+* Add bosses to the instance.**+**
 * Define whether or not the Instance has a hardmode/heroic setting.
 
 That's it.
 
 Managing your kills will be as simple as clicking one of two buttons (default "kill status" is *not killed*); **Attempting** or **Killed**. The rest will be self managed by the plugin.
 
+**+** - Bosses and instances can also be added by running the datapack file. This means the *most* you will need to do is keep the `datapack.php` updated and ran as well as keeping your kills
+and attempts managed.
+
 
 ## Will it come preloaded with instances and bosses?
 
-0.1 will have ICC and Ruby Sanctum. Cataclysm raids will be added when Cataclysm is released. Older raids will be added in time.
+0.1 will have ICC and Ruby Sanctum *POSSIBLY* more. Cataclysm raids will be added when Cataclysm is released. Older raids will be added in time.
 
 Instances and bosses will be added to a datapack file that will "install" them to the database tables. In the event that you do not want to wait for a particular boss or instance
 to be added to the datapack you can manually add either at anytime. So long as you follow the naming/id scheme on wowhead.com nothing will get erased. In mentioning the datapack file
