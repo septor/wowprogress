@@ -3,6 +3,8 @@
 if(!defined("e107_INIT")) {
 	require_once("../../class2.php");
 }
+if(!getperms("P")){ header("location:".e_BASE."index.php"); exit;}
+require_once(e_ADMIN."auth.php");
 
 // data pack version, format is ddmmyyyy
 // number represents the date an instance or boss was added NOT when code is updated
@@ -38,21 +40,31 @@ $bosses = array(
 
 
 // add the instances
+$iAdded = 0;
 foreach($instances as $instance => $info){
 	// if the instance isn't already in the database...
 	if($sql->db_Count("wowprogress_instances", "(*)", "WHERE zonename='".$instance."'") == 0){
 		// ... add it
 		$sql->db_Insert("wowprogress_instances", "'', '".$info[0]."', '".$instance."', '".$info[1]."'");
+		$iAdded++;
 	}
 }
 
 // add the bosses
+$bAdded = 0;
 foreach($bosses as $boss => $info){
 	// if the boss isn't already in the database...
 	if($sql->db_Count("wowprogress_bosses", "(*)", "WHERE bossname='".$boss."'") == 0){
 		// ... add it
 		$sql->db_Insert("wowprogress_bosses", "'', '".$info[1]."', '".$info[0]."', '".$boss."', '".$info[2]."', '0'");
+		$bAdded++;
 	}
 }
+
+$text = "You have successfully added ".$iAdded." instance(s) and ".$bAdded." boss(es) to your database.<br /><br />
+<a href='".e_BASE."'>Click here</a> to return to your websites main page.";
+
+$ns->tablerender("WoW Progress Datapack v".$dpversion, $text);
+require_once(e_ADMIN."footer.php");
 
 ?>
