@@ -34,7 +34,7 @@ while($row = $sql->db_Fetch()){
 	<td>".$row['bossname']."</td>
 	<td>".$row['npcid']."</td>
 	<td>".$row['instance']."</td>
-	<td><a href='#'>Edit</a> - <a href='#'>Delete</a></td>
+	<td><a href='#'><img src='".e_PLUGIN."wowprogress/images/edit.png' style='border:0;' /></a> - <a href='#'><img src='".e_PLUGIN."wowprogress/images/delete.png' style='border:0;' /></a></td>
 	</tr>";
 }
 

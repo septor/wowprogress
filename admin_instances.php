@@ -34,7 +34,7 @@ while($row = $sql->db_Fetch()){
 	<td>".$row['zonename']."</td>
 	<td>".$row['zoneid']."</td>
 	<td>".($row['heroic'] == 1 ? "Yes" : "No")."</td>
-	<td><a href='#'>Edit</a> - <a href='#'>Delete</a></td>
+	<td><a href='#'><img src='".e_PLUGIN."wowprogress/images/edit.png' style='border:0;' /></a> - <a href='#'><img src='".e_PLUGIN."wowprogress/images/delete.png' style='border:0;' /></a></td>
 	</tr>";
 }
 
