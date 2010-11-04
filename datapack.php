@@ -8,10 +8,11 @@ require_once(e_ADMIN."auth.php");
 
 // data pack version, format is ddmmyyyy
 // number represents the date an instance or boss was added NOT when code is updated
-$dpversion = "10232010";
+$dpversion = "11032010";
 
 // instance format is: "instance name" => array(zone id, has heroic)
 $instances = array(
+	"Trial of the Crusader" => array(4722, 1),
 	"Icecrown Citadel" => array(4812, 1),
 	"The Ruby Sanctum" => array(4987, 1)
 );
@@ -19,6 +20,13 @@ $instances = array(
 // boss format is: "boss name" => array("type", id, "instance name");
 // type accepts: npc, object, item
 $bosses = array(
+	"Northrend Beasts" => array("npc", 34797, "Trial of the Crusader")
+	"Lord Jaraxxus" => array("npc", 34780, "Trial of the Crusader")
+	"Faction Champions" => array("object", 195631, "Trial of the Crusader")
+	"Fjola" => array("npc", 34497, "Trial of the Crusader")
+	"Eydis" => array("npc", 34496, "Trial of the Crusader")
+	"Anub'arak" => array("npc", 34564, "Trial of the Crusader")
+
 	"Lord Marrowgar" => array("npc", 36612, "Icecrown Citadel"),
 	"Lady Deathwhisper" => array("npc", 36855, "Icecrown Citadel"),
 	"Gunship Battle" => array("object", 201873, "Icecrown Citadel"),
