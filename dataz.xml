@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<datapack>
+	
+	<version>11032010</version>
+
+	<instance name="Trial of the Crusader" id="4722" heroic="1">
+
+		<boss name="Northrend Beasts" type="npc" id="34797" />
+		<boss name="Lord Jaraxxus" type="npc" id="34780" />
+		<boss name="Faction Champions" type="object" id="195631" />
+		<boss name="Fjola" type="npc" id="34497" />
+		<boss name="Eydis" type="npc" id="34496" />
+		<boss name="Anub'arak" type="npc" id="34564" />
+
+	</instance>
+
+	<instance name="Icecrown Citadel" id="4812" heroic="1">
+
+		<boss name="Lord Marrowgar" type="npc" id="36612" />
+		<boss name="Lady Deathwhisper" type="npc" id="36855" />
+		<boss name="Gunship Battle" type="object" id="201873" />
+		<boss name="Deathbringer Saurfang" type="npc" id="37813" />
+		<boss name="Festergut" type="npc" id="36626" />
+		<boss name="Rotface" type="npc" id="36627" />
+		<boss name="Professor Putricide" type="npc" id="36678" />
+		<boss name="Blood Prince Council" type="npc" id="37970" />
+		<boss name="Blood-Queen Lana'thel" type="npc" id="37955" />
+		<boss name="Valithria Dreamwalker" type="npc" id="36789" />
+		<boss name="Sindragosa" type="npc" id="36853" />
+		<boss name="The Lich King" type="npc" id="36597" />
+
+	</instance>
+
+	<instance name="The Ruby Sanctum" id="4987" heroic="1">
+
+		<boss name="Baltharus the Warborn" type="npc" id="39751" />
+		<boss name="General Zarithrian" type="npc" id="39746" />
+		<boss name="Saviana Ragefire" type="npc" id="39747" />
+		<boss name="Halion" type="npc" id="39863" />
+
+	</instance>
+
+</datapack>
