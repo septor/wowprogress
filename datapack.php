@@ -25,7 +25,7 @@ if(file_exists(e_PLUGIN."wowprogress/dataz.xml")){
 			// if the boss isn't already in the database...
 			if($sql->db_Count("wowprogress_bosses", "(*)", "WHERE bossname='".$boss['name']."'") == 0){
 				// ... add it
-				$sql->db_Insert("wowprogress_bosses", "'', '".$boss['id']."', '".$boss['type']."', '".$boss['name']."', '".$instance['name']."', '0'");
+				$sql->db_Insert("wowprogress_bosses", "'', '".$boss['id']."', '".$boss['type']."', '".$boss['name']."', '".$instance['name']."', '0', '0'");
 				$bAdded++;
 			}
 		}
