@@ -6,13 +6,13 @@ $butname[]  = "Configuration";
 $butlink[]  = "admin_config.php";
 $butid[]    = "config";
 
-$butname[]  = "Add Bosses";
-$butlink[]  = "admin_bosses.php";
-$butid[]    = "bosses";
+$butname[]  = "Manage Progression";
+$butlink[]  = "progress.php";
+$butid[]    = "progress";
 
-$butname[]  = "Add Instances";
-$butlink[]  = "admin_instances.php";
-$butid[]    = "instances"; 
+$butname[]  = "Process Datapack";
+$butlink[]  = "datapack.php";
+$butid[]    = "datapack";
 
 global $pageid;
 for ($i=0; $i<count($butname); $i++) {
