@@ -1,6 +1,7 @@
 <?php
 
 if(!defined("e107_INIT")) {
+	$eplug_admin = TRUE;
 	require_once("../../class2.php");
 }
 if(!getperms("P")){ header("location:".e_BASE."index.php"); exit;}
@@ -14,18 +15,18 @@ if(file_exists(e_PLUGIN."wowprogress/dataz.xml")){
 	$bAdded = 0;
 	foreach($dp->instance as $instance){
 		// if the instance isn't already in the database...
-		if($sql->db_Count("wowprogress_instances", "(*)", "WHERE zonename='".$instance['name']."'") == 0){
+		if($sql->db_Count("wowprogress_instances", "(*)", "WHERE zonename='".addslashes($instance['name'])."'") == 0){
 			// ... add it
-			$sql->db_Insert("wowprogress_instances", "'', '".$instance['id']."', '".$instance['name']."', '".$instance['heroic']."'");
+			$sql->db_Insert("wowprogress_instances", "'', '".$instance['id']."', '".addslashes($instance['name'])."', '".$instance['heroic']."'") or die(mysql_error());
 			$iAdded++;
 		}
 
 		// now the bosses!
 		foreach($instance->boss as $boss){
 			// if the boss isn't already in the database...
-			if($sql->db_Count("wowprogress_bosses", "(*)", "WHERE bossname='".$boss['name']."'") == 0){
-				// ... add it
-				$sql->db_Insert("wowprogress_bosses", "'', '".$boss['id']."', '".$boss['type']."', '".$boss['name']."', '".$instance['name']."', '0', '0'");
+			if($sql->db_Count("wowprogress_bosses", "(*)", "WHERE bossname='".addslashes($boss['name'])."'") == 0){
+				$heroic_status = ($instance['heroic'] == "1" ? "0" : "");
+				$sql->db_Insert("wowprogress_bosses", "'', '".$boss['id']."', '".$boss['type']."', '".addslashes($boss['name'])."', '".addslashes($instance['name'])."', '0', '".$heroic_status."'") or die(mysql_error());
 				$bAdded++;
 			}
 		}
@@ -36,6 +37,8 @@ if(file_exists(e_PLUGIN."wowprogress/dataz.xml")){
 	<a href='".e_BASE."'>Click here</a> to return to your websites main page.";
 
 	$ns->tablerender("WoW Progress Datapack v".$dp->version, $text);
+
+	unset($iAdded, $bAdded);
 
 }else{
 
