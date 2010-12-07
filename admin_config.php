@@ -20,7 +20,7 @@ require_once(e_ADMIN."auth.php");
 
 	
 if (isset($_POST['updatesettings'])) {
-	$pref['wowprogress_manageclass'] = $_POST['manageclass'];
+	$pref['wowprogress_manageclass'] = $_POST['wowprogress_manageclass'];
 	save_prefs();
 	$message = "Settings saved successfully!";
 }
