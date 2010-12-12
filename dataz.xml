@@ -4,25 +4,27 @@
 	<version>12122010</version>
 
 	<instance name="Gruul's Lair" id="3923" heroic="0">
-
 		<boss name="High King Maulgar" type="npc" id="18831" />
 		<boss name="Gruul the Dragonkiller" type="npc" id="19044" />
+	</instance>
 
+	<instance name="Vault of Archavon" id="4603" heroic="0">
+		<boss name="Archavon the Stone Watcher" type="npc" id="31125" />
+		<boss name="Emalon the Storm Watcher" type="npc" id="33993" />
+		<boss name="Koralon the Flame Watcher" type="npc" id="35013" />
+		<boss name="Toravon the Ice Watcher" type="npc" id="38433" />
 	</instance>
 
 	<instance name="Trial of the Crusader" id="4722" heroic="1">
-
 		<boss name="Northrend Beasts" type="npc" id="34797" />
 		<boss name="Lord Jaraxxus" type="npc" id="34780" />
 		<boss name="Faction Champions" type="object" id="195631" />
 		<boss name="Fjola" type="npc" id="34497" />
 		<boss name="Eydis" type="npc" id="34496" />
 		<boss name="Anub'arak" type="npc" id="34564" />
-
 	</instance>
 
 	<instance name="Icecrown Citadel" id="4812" heroic="1">
-
 		<boss name="Lord Marrowgar" type="npc" id="36612" />
 		<boss name="Lady Deathwhisper" type="npc" id="36855" />
 		<boss name="Gunship Battle" type="object" id="201873" />
@@ -35,22 +37,39 @@
 		<boss name="Valithria Dreamwalker" type="npc" id="36789" />
 		<boss name="Sindragosa" type="npc" id="36853" />
 		<boss name="The Lich King" type="npc" id="36597" />
-
 	</instance>
 
 	<instance name="The Ruby Sanctum" id="4987" heroic="1">
-
 		<boss name="Baltharus the Warborn" type="npc" id="39751" />
 		<boss name="General Zarithrian" type="npc" id="39746" />
 		<boss name="Saviana Ragefire" type="npc" id="39747" />
 		<boss name="Halion" type="npc" id="39863" />
-
 	</instance>
 
 	<instance name="Baradin Hold" id="5600" heroic="0">
-
 		<boss name="Argaloth" type="npc" id="47120" />
-	
+	</instance>
+
+	<instance name="Blackwing Descent" id="5094" heroic="0">
+		<boss name="Magmaw" type="npc" id="41570" />
+		<boss name="Omintron Defense System" type="npc" id="42180" />
+		<boss name="Maloriak" type="npc" id="41378" />
+		<boss name="Atramedes" type="npc" id="41442" />
+		<boss name="Chimaeron" type="npc" id="43296" />
+		<boss name="Nefarian" type="npc" id="41376" />
+	</instance>
+
+	<instance name="The Bastion of Twilight" id="5334" heroic="0">
+		<boss name="Valiona" type="npc" id="45992" />
+		<boss name="Theralion" type="npc" id="45993" />
+		<boss name="Halfus Wyrmbreaker" type="npc" id="44600" />
+		<boss name="Twilight Ascendant Council" type="npc" id="43735" />
+		<boss name="Cho'gall" type="npc" id="43324" />
+	</instance>
+
+	<instance name="Throne of the Four Winds" id="5638" heroic="1">
+		<boss name="Conclave of Wind" type="npc" id="45871" />
+		<boss name="Al'Akir" type="npc" id="46753" />
 	</instance>
 
 </datapack>
