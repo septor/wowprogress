@@ -20,6 +20,15 @@ require_once(e_ADMIN."auth.php");
 
 	
 if (isset($_POST['updatesettings'])) {
+	$si = $_POST['showinstances'];
+	$instances = "";
+	if(!empty($si)){
+		$n = count($si);
+		for($i=0; $i < $n; $i++){
+			$instances .= $si[$i]." ";
+		}
+	}
+	$pref['wowprogress_showinstances'] = $instances;
 	$pref['wowprogress_manageclass'] = $_POST['wowprogress_manageclass'];
 	save_prefs();
 	$message = "Settings saved successfully!";
@@ -38,6 +47,23 @@ $text = "
 <td style='width:50%; text-align:right' class='forumheader3'>
 ".r_userclass('wowprogress_manageclass', $pref['wowprogress_manageclass'], 'off', 'nobody,member,admin,classes')."
 </td>
+</tr>
+<tr>
+<td style='width:50%' class='forumheader3'>Which instances do you want displayed on the menu item?</td>
+<td style='width:50%; text-align:right' class='forumheader3'>";
+
+$sql->db_Select("wowprogress_instances", "*") or die(mysql_error());
+
+while($row = $sql->db_Fetch()){
+	$showinstances = explode(" ", $pref['wowprogress_showinstances']);
+	if(in_array($row['id'], $showinstances)){
+		$text .= $row['zonename']." <input type='checkbox' name='showinstances[]' value='".$row['id']."' checked /><br />";
+	}else{
+		$text .= $row['zonename']." <input type='checkbox' name='showinstances[]' value='".$row['id']."' /><br />";
+	}
+}
+
+$text .= "</td>
 </tr>
 <tr>
 <td colspan='2' style='text-align:center' class='forumheader'>

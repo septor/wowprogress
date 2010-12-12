@@ -7,8 +7,8 @@ $butlink[]  = "admin_config.php";
 $butid[]    = "config";
 
 $butname[]  = "Manage Progression";
-$butlink[]  = "progress.php";
-$butid[]    = "progress";
+$butlink[]  = "manage.php";
+$butid[]    = "manage";
 
 $butname[]  = "Process Datapack";
 $butlink[]  = "datapack.php";

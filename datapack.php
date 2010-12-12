@@ -33,8 +33,10 @@ if(file_exists(e_PLUGIN."wowprogress/dataz.xml")){
 
 	}
 
-	$text = "You have successfully added ".$iAdded." instance(s) and ".$bAdded." boss(es) to your database.<br /><br />
-	<a href='".e_BASE."'>Click here</a> to return to your websites main page.";
+	$text = "<div style='text-align:center;'>
+	You have successfully added ".$iAdded." instance(s) and ".$bAdded." boss(es) to your database.<br /><br />
+	<a href='".e_PLUGIN."wowprogress/manage.php'>Click here</a> manage the newly added data.
+	</div>";
 
 	$ns->tablerender("WoW Progress Datapack v".$dp->version, $text);
 
