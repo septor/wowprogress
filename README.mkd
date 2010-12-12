@@ -26,7 +26,7 @@ and run the `datapack.php` file, which will load any bosses and instances into y
 
 ## Will it come preloaded with instances and bosses?
 
-Yes. The `dataz.xml` file has bosses and instances ready to go. More will be added over time. Current content has probity.
+Yes. The `dataz.xml` file has bosses and instances ready to go. More will be added over time. Current content has priority.
 
 ## How do I manage the boss kills?
 
