@@ -37,9 +37,5 @@ Yes. If an instance supports heroic modes you can define whether or not you have
 
 ## 10man and 25man support?
 
-There are no defines to say one way or the other. Generally guilds only focus on raiding style, so the need (in my opinion) to show off which version you have killed is pointless.
+There are no defines to say one way or the other. Generally guilds only focus on one raiding style, so the need (in my opinion) to show off which version you have killed is pointless.
 In the future, however, if it's requested enough I'll see about adding support for both in.
-
-# Translations
-
-If you would like to translate this plugin, post the translations on [paste2.org](http://paste2.org/) and [PM](http://e107.org/e107_plugins/pm/pm.php?send.37) me the URL generated.
