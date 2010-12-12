@@ -7,9 +7,11 @@ inside the archieve program you use to decompress the tar/zipball.
 
 # WoW Progression Menu
 
-**NOTE: This plugin has yet to be started. It's next on the list of things to do.**
-
 Allows you to show off which kills your guild has made.
+
+## NOTE
+
+**This plugin is not finished. You should not be using this (you can't, really) yet. An alpha build should be up shortly.**
 
 # FAQ
 
