@@ -9,12 +9,6 @@ inside the archieve program you use to decompress the tar/zipball.
 
 Allows you to show off which kills your guild has made.
 
-## NOTE -- READ THE BELOW TWO LINES CAREFULLY
-
-**This plugin is not finished. You should not be using this (you can't, really) yet.**
-
-**The remaining section of this plugin (menu) is next on the plate, since everything else is completed, so an alpha version should be out shortly.**
-
 # FAQ
 
 That aren't really frequently asked (yet).
@@ -32,6 +26,10 @@ Yes. The `dataz.xml` file has bosses and instances ready to go. More will be add
 
 Firstly, you need to set a userclass that is allowed to do so. Secondly, you need to navigate to the *Manage Progression* page. Here you can select from three statuses: Killed,
 Attempting, and Not Killed. All statuses are saved on a per-instance basis so **make sure you save between instances**!
+
+## What if I don't want an instance displayed on the menu?
+
+You can choose which instances you want displayed on the menu in the configuration area.
 
 ## Does it have support for heroic mode bosses?
 
