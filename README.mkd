@@ -9,15 +9,15 @@ inside the archieve program you use to decompress the tar/zipball.
 
 Allows you to show off which kills your guild has made.
 
-## NOTE
+## NOTE -- READ THE BELOW TWO LINES CAREFULLY
 
-**This plugin is not finished. You should not be using this (you can't, really) yet. An alpha build should be up shortly.**
+**This plugin is not finished. You should not be using this (you can't, really) yet.**
+
+**The remaining section of this plugin (menu) is next on the plate, since everything else is completed, so an alpha version should be out shortly.**
 
 # FAQ
 
-That aren't really frequently asked (yet). It should also be known that **the below information is very rough draftesque, meaning it is not set in stone. At all.** Over the course
-of the development of this plugin; **this file will more than likely change a lot.** The major problem, and long wait time for this plugin, is due to me getting something in and ready
-and then deciding that I could probably do it a better, more effective, way (eg: the adding/removing of bosses/instances, etc).
+That aren't really frequently asked (yet).
 
 ## How do I add bosses and instances?
 
@@ -26,13 +26,12 @@ and run the `datapack.php` file, which will load any bosses and instances into y
 
 ## Will it come preloaded with instances and bosses?
 
-The short answer is yes. The long, probably more appropriate answer is: It **will** include Trial of the Crusader, Icecrown Citadel, and The Ruby Sanctum. Older raids will be added
-as time goes on. Cataclysm raids will be added directly after the initial release of the plugin. Now obviously based on how the bosses and instances are handled, this can all change
-quickly (for the better, as in more stuff than is mentioned).
+Yes. The `dataz.xml` file has bosses and instances ready to go. More will be added over time. Current content has probity.
 
 ## How do I manage the boss kills?
 
-Firstly, you need to set a userclass that is allowed to do so. Secondly.. it's not really worked out yet. This is actually the phase of the plugin that I'm working on currently.
+Firstly, you need to set a userclass that is allowed to do so. Secondly, you need to navigate to the *Manage Progression* page. Here you can select from three statuses: Killed,
+Attempting, and Not Killed. All statuses are saved on a per-instance basis so **make sure you save between instances**!
 
 ## Does it have support for heroic mode bosses?
 
@@ -40,7 +39,8 @@ Yes. If an instance supports heroic modes you can define whether or not you have
 
 ## 10man and 25man support?
 
-Not sure about this yet. Since most guilds only focus on one or the other I'm not really seeing a reason to support both.
+There are no defines to say one way or the other. Generally guilds only focus on raiding style, so the need (in my opinion) to show off which version you have killed is pointless.
+In the future, however, if it's requested enough I'll see about adding support for both in.
 
 # Translations
 
