@@ -42,8 +42,8 @@ if(check_class($pref['wowprogress_manageclass'])){
 		</tr>
 		<tr>
 		<td class='forumheader3' style='width:70%'><b>Boss Name</b></td>
-		<td class='forumheader3'><b>Normal Status</b></td>
-		".($row['heroic'] == "1" ? "<td class='forumheader3'><b>Heroic Status</b></td>" : "")."
+		<td class='forumheader3' style='text-align:center;'><b>Normal Status</b></td>
+		".($row['heroic'] == "1" ? "<td class='forumheader3' style='text-align:center;'><b>Heroic Status</b></td>" : "")."
 		</tr>";
 
 		$sql2->db_Select("wowprogress_bosses", "*", "instance='".addslashes($row['zonename'])."'") or die(mysql_error());
@@ -51,14 +51,14 @@ if(check_class($pref['wowprogress_manageclass'])){
 		while($row2 = $sql2->db_Fetch()){
 			$text .= "<tr>
 			<td class='forumheader3'><a href='http://www.wowhead.com/".$row2['npctype']."=".$row2['npcid']."'>".$row2['bossname']."</a></td>
-			<td class='forumheader3'>
+			<td class='forumheader3' style='text-align:center;'>
 			<select name='status[]' class='tbox'>
 			<option value='0.".$row2['id']."'".($row2['status'] == "0" ? " selected" : "").">Not Killed</option>
 			<option value='1.".$row2['id']."'".($row2['status'] == "1" ? " selected" : "").">Attempting</option>
 			<option value='2.".$row2['id']."'".($row2['status'] == "2" ? " selected" : "").">Killed</option>
 			</select>
 			</td>
-			".($row['heroic'] == "1" ? "<td class='forumheader3'>
+			".($row['heroic'] == "1" ? "<td class='forumheader3' style='text-align:center;'>
 			<select name='heroic[]' class='tbox'>
 			<option value='0.".$row2['id']."'".($row2['heroic'] == "0" ? " selected" : "").">Not Killed</option>
 			<option value='1.".$row2['id']."'".($row2['heroic'] == "1" ? " selected" : "").">Attempting</option>
