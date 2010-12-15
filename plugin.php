@@ -3,7 +3,7 @@
 //PLUGIN INFO------------------------------------------------------------------------------------------------+
 
 $eplug_name        = "WoW Progression Menu";
-$eplug_version     = "ALPHA";
+$eplug_version     = "ALPHA2";
 $eplug_author      = "Patrick Weaver";
 $eplug_url         = "http://painswitch.com/";
 $eplug_email       = "patrickweaver@gmail.com";
@@ -27,16 +27,18 @@ $eplug_conffile   = "admin_config.php";
 
 //PLUGIN ICONS AND CAPTION-----------------------------------------------------------------------------------+
 
-$eplug_logo       = "images/icon_large.png";
-$eplug_icon       = $eplug_folder."/icon_large.png";
-$eplug_icon_small = $eplug_folder."/icon_small.png";
+$eplug_logo       = "";
+$eplug_icon       = "";
+$eplug_icon_small = "";
 $eplug_caption    = "Configure WoW Progression Menu";
 
 //DEFAULT PREFERENCES----------------------------------------------------------------------------------------+
 
 $eplug_prefs = array(
 	"wowprogress_manageclass" => "",
-	"wowprogress_showninstances" => ""
+	"wowprogress_showninstances" => "",
+	"wowprogrss_killstyle" => "normal",
+	"wowprogress_headerstyle" => "forumheader"
 );
 
 //MYSQL TABLES TO BE CREATED---------------------------------------------------------------------------------+

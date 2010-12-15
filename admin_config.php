@@ -30,6 +30,8 @@ if (isset($_POST['updatesettings'])) {
 	}
 	$pref['wowprogress_showinstances'] = $instances;
 	$pref['wowprogress_manageclass'] = $_POST['wowprogress_manageclass'];
+	$pref['wowprogress_killstyle'] = $_POST['killstyle'];
+	$pref['wowprogress_headerstyle'] = $_POST['headerstyle'];
 	save_prefs();
 	$message = "Settings saved successfully!";
 }
@@ -66,6 +68,28 @@ while($row = $sql->db_Fetch()){
 $text .= ($sitext != "" ? $sitext : "You don't have any instances in the database! <a href='".e_PLUGIN."wowprogress/datapack.php'>Add some</a>!");
 
 $text .= "</td>
+</tr>
+<tr>
+<td style='width:50%' class='forumheader3'>Which progression kill style do you want displayed by the instance titles?:</td>
+<td style='width:50%; text-align:right' class='forumheader3'>
+<select name='killstyle' class='tbox'>
+<option value='total'".($pref['wowprogress_killstyle'] == "total" ? " selected" : "").">Total - Icecrown Citadel (8/24)</option>
+<option value='normal'".($pref['wowprogress_killstyle'] == "normal" ? " selected" : "").">Normal - Icecrown Citadel (6/12)</option>
+<option value='heroic'".($pref['wowprogress_killstyle'] == "heroic" ? " selected" : "").">Heroic - Icecrown Citadel (2/12)</option>
+<option value='none'".($pref['wowprogress_killstyle'] == "none" ? " selected" : "").">None - Icecrown Citadel</option>
+</select>
+</td>
+</tr>
+<tr>
+<td style='width:50%' class='forumheader3'>Styling to use for the instance titles:</td>
+<td style='width:50%; text-align:right' class='forumheader3'>
+<select name='headerstyle' class='tbox'>
+<option value='fcaption'".($pref['wowprogress_headerstyle'] == "fcaption" ? " selected" : "").">fcaption</option>
+<option value='forumheader'".($pref['wowprogress_headerstyle'] == "forumheader" ? " selected" : "").">forumheader</option>
+<option value='forumheader2'".($pref['wowprogress_headerstyle'] == "forumheader2" ? " selected" : "").">forumheader2</option>
+<option value='forumheader3'".($pref['wowprogress_headerstyle'] == "forumheader3" ? " selected" : "").">forumheader3</option>
+</select>
+</td>
 </tr>
 <tr>
 <td colspan='2' style='text-align:center' class='forumheader'>

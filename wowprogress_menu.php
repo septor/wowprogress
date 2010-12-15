@@ -18,8 +18,22 @@ while($row = $sql->db_Fetch()){
 		$nkilled = $sql3->db_Count("wowprogress_bosses", "(*)", "WHERE instance='".addslashes($row['zonename'])."' AND status='2'");
 		$hkilled = $sql3->db_Count("wowprogress_bosses", "(*)", "WHERE instance='".addslashes($row['zonename'])."' AND heroic='2'");
 
-		$text .= "<div onclick='expandit(\"".$row['zoneid']."\");' class='forumheader' style='cursor: pointer;'>
-		".$row['zonename']."
+		if($pref['wowprogress_killstyle'] == "total"){
+			if($row['heroic'] == "1"){
+				$killstyle = "(".($nkilled + $hkilled)."/".($bosses * 2).") ";
+			}else{
+				$killstyle = "(".$nkilled."/".$bosses.") ";
+			}
+		}else if($pref['wowprogress_killstyle'] == "normal"){
+			$killstyle = "(".$nkilled."/".$bosses.") ";
+		}else if($pref['wowprogress_killstyle'] == "heroic"){
+			$killstyle = "(".$hkilled."/".$bosses.") ";
+		}else{
+			$killstyle = "";
+		}
+
+		$text .= "<div onclick='expandit(\"".$row['zoneid']."\");' class='".$pref['wowprogress_headerstyle']."' style='cursor: pointer;'>
+		".$killstyle.$row['zonename']."
 		</div>
 		
 		<table style='width:90%; display:none;' id='".$row['zoneid']."'>
