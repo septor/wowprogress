@@ -52,16 +52,18 @@ $text = "
 <td style='width:50%' class='forumheader3'>Which instances do you want displayed on the menu item?</td>
 <td style='width:50%; text-align:right' class='forumheader3'>";
 
-$sql->db_Select("wowprogress_instances", "*") or die(mysql_error());
-
+$sql->db_Select("wowprogress_instances", "*");
+$sitext = "";
 while($row = $sql->db_Fetch()){
 	$showinstances = explode(" ", $pref['wowprogress_showinstances']);
 	if(in_array($row['id'], $showinstances)){
-		$text .= $row['zonename']." <input type='checkbox' name='showinstances[]' value='".$row['id']."' checked /><br />";
+		$sitext .= $row['zonename']." <input type='checkbox' name='showinstances[]' value='".$row['id']."' checked /><br />";
 	}else{
-		$text .= $row['zonename']." <input type='checkbox' name='showinstances[]' value='".$row['id']."' /><br />";
+		$sitext .= $row['zonename']." <input type='checkbox' name='showinstances[]' value='".$row['id']."' /><br />";
 	}
 }
+
+$text .= ($sitext != "" ? $sitext : "You don't have any instances in the database! <a href='".e_PLUGIN."wowprogress/datapack.php'>Add some</a>!");
 
 $text .= "</td>
 </tr>
