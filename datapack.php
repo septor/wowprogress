@@ -34,17 +34,17 @@ if(file_exists(e_PLUGIN."wowprogress/dataz.xml")){
 	}
 
 	$text = "<div style='text-align:center;'>
-	You have successfully added ".$iAdded." instance(s) and ".$bAdded." boss(es) to your database.<br /><br />
-	<a href='".e_PLUGIN."wowprogress/manage.php'>Click here</a> manage the newly added data.
+	".WPDPACK_LAN001.$iAdded.WPDPACK_LAN002.$bAdded.WPDPACK_LAN003."<br /><br />
+	<a href='".e_PLUGIN."wowprogress/manage.php'>".WPDPACK_LAN004."</a>
 	</div>";
 
-	$ns->tablerender("WoW Progress Datapack v".$dp->version, $text);
+	$ns->tablerender(WPDPACK_LAN005." v".$dp->version, $text);
 
 	unset($iAdded, $bAdded);
 
 }else{
 
-	$ns->tablerender("WoW Progress Datapack NOT FOUND!", "You don't appear to have a dataz.xml file in your possesion. Please grab the latest copy <a href='https://github.com/septor/wowprogress/raw/master/dataz.xml'>here</a> and re-run this script!");
+	$ns->tablerender(WPDPACK_LAN006, WPDPACK_LAN007." <a href='https://github.com/septor/wowprogress/raw/master/dataz.xml'>".WPDPACK_LAN008."</a>");
 
 }
 require_once(e_ADMIN."footer.php");

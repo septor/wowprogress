@@ -3,11 +3,11 @@
 //PLUGIN INFO------------------------------------------------------------------------------------------------+
 
 $eplug_name        = "WoW Progression Menu";
-$eplug_version     = "ALPHA2";
+$eplug_version     = "0.1";
 $eplug_author      = "Patrick Weaver";
 $eplug_url         = "http://painswitch.com/";
 $eplug_email       = "patrickweaver@gmail.com";
-$eplug_description = "World of Warcraft Boss Progression Menu";
+$eplug_description = WPPLUGIN_LAN001;
 $eplug_compatible  = "e107 0.7+";
 $eplug_readme      = "";
 $eplug_compliant   = TRUE;
@@ -30,7 +30,7 @@ $eplug_conffile   = "admin_config.php";
 $eplug_logo       = "";
 $eplug_icon       = "";
 $eplug_icon_small = "";
-$eplug_caption    = "Configure WoW Progression Menu";
+$eplug_caption    = WPPLUGIN_LAN002;
 
 //DEFAULT PREFERENCES----------------------------------------------------------------------------------------+
 
@@ -76,7 +76,7 @@ $eplug_link_url  = "";
 
 //MESSAGE WHEN PLUGIN IS INSTALLED-------------------------------------------------------------------------+
 
-$eplug_done = $eplug_name." has been sucessfully installed! If you wish to install the bosses and instances pack <a href='".e_PLUGIN."wowprogress/datapack.php'>click here</a>.";
+$eplug_done = $eplug_name." ".WPPLUGIN_LAN003."<a href='".e_PLUGIN."wowprogress/datapack.php'>".WPPLUGIN_LAN004."</a>.";
 
 //SAME AS ABOVE BUT ONLY RUN WHEN CHOOSING UPGRADE---------------------------------------------------------+
 

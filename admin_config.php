@@ -1,16 +1,5 @@
 <?php
-/*
-+ ----------------------------------------------------------------------------+
-|     e107 website system
-|
-|     ©Steve Dunstan 2001-2002
-|     http://e107.org
-|     jalist@e107.org
-|
-|     Released under the terms and conditions of the
-|     GNU General Public License (http://gnu.org).
-+----------------------------------------------------------------------------+
-*/
+
 if(!defined("e107_INIT")) {
 	require_once("../../class2.php");
 }
@@ -33,7 +22,7 @@ if (isset($_POST['updatesettings'])) {
 	$pref['wowprogress_killstyle'] = $_POST['killstyle'];
 	$pref['wowprogress_headerstyle'] = $_POST['headerstyle'];
 	save_prefs();
-	$message = "Settings saved successfully!";
+	$message = WPCONFIG_LAN001;
 }
 
 if (isset($message)) {
@@ -45,13 +34,13 @@ $text = "
 <form method='post' action='".e_SELF."'>
 <table style='width:75%' class='fborder'>
 <tr>
-<td style='width:50%' class='forumheader3'>Who can manage the boss kills?</td>
+<td style='width:50%' class='forumheader3'>".WPCONFIG_LAN002."</td>
 <td style='width:50%; text-align:right' class='forumheader3'>
 ".r_userclass('wowprogress_manageclass', $pref['wowprogress_manageclass'], 'off', 'nobody,member,admin,classes')."
 </td>
 </tr>
 <tr>
-<td style='width:50%' class='forumheader3'>Which instances do you want displayed on the menu item?</td>
+<td style='width:50%' class='forumheader3'>".WPCONFIG_LAN003."</td>
 <td style='width:50%; text-align:right' class='forumheader3'>";
 
 $sql->db_Select("wowprogress_instances", "*");
@@ -65,23 +54,23 @@ while($row = $sql->db_Fetch()){
 	}
 }
 
-$text .= ($sitext != "" ? $sitext : "You don't have any instances in the database! <a href='".e_PLUGIN."wowprogress/datapack.php'>Add some</a>!");
+$text .= ($sitext != "" ? $sitext : "".WPCONFIG_LAN004." <a href='".e_PLUGIN."wowprogress/datapack.php'>".WPCONFIG_LAN005."</a>!");
 
 $text .= "</td>
 </tr>
 <tr>
-<td style='width:50%' class='forumheader3'>Which progression kill style do you want displayed by the instance titles?:</td>
+<td style='width:50%' class='forumheader3'>".WPCONFIG_LAN006."</td>
 <td style='width:50%; text-align:right' class='forumheader3'>
 <select name='killstyle' class='tbox'>
-<option value='total'".($pref['wowprogress_killstyle'] == "total" ? " selected" : "").">Total - Icecrown Citadel (8/24)</option>
-<option value='normal'".($pref['wowprogress_killstyle'] == "normal" ? " selected" : "").">Normal - Icecrown Citadel (6/12)</option>
-<option value='heroic'".($pref['wowprogress_killstyle'] == "heroic" ? " selected" : "").">Heroic - Icecrown Citadel (2/12)</option>
-<option value='none'".($pref['wowprogress_killstyle'] == "none" ? " selected" : "").">None - Icecrown Citadel</option>
+<option value='total'".($pref['wowprogress_killstyle'] == "total" ? " selected" : "").">".WPCONFIG_LAN007." - Icecrown Citadel (8/24)</option>
+<option value='normal'".($pref['wowprogress_killstyle'] == "normal" ? " selected" : "").">".WPCONFIG_LAN008." - Icecrown Citadel (6/12)</option>
+<option value='heroic'".($pref['wowprogress_killstyle'] == "heroic" ? " selected" : "").">".WPCONFIG_LAN009." - Icecrown Citadel (2/12)</option>
+<option value='none'".($pref['wowprogress_killstyle'] == "none" ? " selected" : "").">".WPCONFIG_LAN010." - Icecrown Citadel</option>
 </select>
 </td>
 </tr>
 <tr>
-<td style='width:50%' class='forumheader3'>Styling to use for the instance titles:</td>
+<td style='width:50%' class='forumheader3'>".WPCONFIG_LAN011."</td>
 <td style='width:50%; text-align:right' class='forumheader3'>
 <select name='headerstyle' class='tbox'>
 <option value='fcaption'".($pref['wowprogress_headerstyle'] == "fcaption" ? " selected" : "").">fcaption</option>
@@ -93,7 +82,7 @@ $text .= "</td>
 </tr>
 <tr>
 <td colspan='2' style='text-align:center' class='forumheader'>
-<input class='button' type='submit' name='updatesettings' value='Save Settings' />
+<input class='button' type='submit' name='updatesettings' value='".WPCONFIG_LAN012."' />
 </td>
 </tr>
 </table>
@@ -101,6 +90,6 @@ $text .= "</td>
 </div>
 ";
 
-$ns->tablerender("Configure WoW Progression Menu", $text);
+$ns->tablerender(WPCONFIG_LAN013, $text);
 require_once(e_ADMIN."footer.php");
 ?>

@@ -4,7 +4,7 @@ if (!defined('e107_INIT')) { exit; }
 
 define("WOWPROG", e_PLUGIN."wowprogress/");
 
-$text = "We have cleared the following:<br /><br />";
+$text = WPMENU_LAN001."<br /><br />";
 
 $sql->db_Select("wowprogress_instances", "*") or die(mysql_error());
 
@@ -39,8 +39,8 @@ while($row = $sql->db_Fetch()){
 		<table style='width:90%; display:none;' id='".$row['zoneid']."'>
 		<tr>
 		<td style='width: 70%;'>&nbsp;</td>
-		<td style='text-align:center;'><img src='".WOWPROG."images/normal.gif' title='Normal Mode' /></td>
-		".($row['heroic'] == "1" ? "<td style='text-align:center;'><img src='".WOWPROG."images/heroic.gif' title='Heroic Mode' /></td>" : "")."
+		<td style='text-align:center;'><img src='".WOWPROG."images/normal.gif' title='".WPMENU_LAN002."' /></td>
+		".($row['heroic'] == "1" ? "<td style='text-align:center;'><img src='".WOWPROG."images/heroic.gif' title='".WPMENU_LAN003."' /></td>" : "")."
 		</tr>";
 
 		$sql4->db_Select("wowprogress_bosses", "*", "instance='".addslashes($row['zonename'])."'") or die(mysql_error());
@@ -48,19 +48,19 @@ while($row = $sql->db_Fetch()){
 
 		while($row2 = $sql4->db_Fetch()){
 			if($row2['status'] == "0"){
-				$status = "<img src='".WOWPROG."images/notkilled.png' title='Not Killed' />";
+				$status = "<img src='".WOWPROG."images/notkilled.png' title='".WPMENU_LAN004."' />";
 			}else if($row2['status'] == "1"){
-				$status = "<img src='".WOWPROG."images/attempting.png' title='Attempting' />";
+				$status = "<img src='".WOWPROG."images/attempting.png' title='".WPMENU_LAN005."' />";
 			}else if($row2['status'] == "2"){
-				$status = "<img src='".WOWPROG."images/killed.png' title='Killed' />";
+				$status = "<img src='".WOWPROG."images/killed.png' title='".WPMENU_LAN006."' />";
 			}
 
 			if($row2['heroic'] == "0"){
-				$heroic = "<img src='".WOWPROG."images/notkilled.png' title='Not Killed' />";
+				$heroic = "<img src='".WOWPROG."images/notkilled.png' title='".WPMENU_LAN004."' />";
 			}else if($row2['heroic'] == "1"){
-				$heroic = "<img src='".WOWPROG."images/attempting.png' title='Attempting' />";
+				$heroic = "<img src='".WOWPROG."images/attempting.png' title='".WPMENU_LAN005."' />";
 			}else if($row2['heroic'] == "2"){
-				$heroic = "<img src='".WOWPROG."images/killed.png' title='Killed' />";
+				$heroic = "<img src='".WOWPROG."images/killed.png' title='".WPMENU_LAN006."' />";
 			}
 
 			$text .= "<tr>
@@ -81,6 +81,6 @@ while($row = $sql->db_Fetch()){
 	
 }
 
-$ns->tablerender("Raid Progress", $text);
+$ns->tablerender(WPMENU_LAN007, $text);
 
 ?>
