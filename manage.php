@@ -6,6 +6,7 @@ if(!defined("e107_INIT")) {
 }
 if(!getperms("P")){ header("location:".e_BASE."index.php"); exit;}
 require_once(e_ADMIN."auth.php");
+include_lan(e_PLUGIN."wowprogress/languages/".e_LANGUAGE.".php");
 
 if(check_class($pref['wowprogress_manageclass'])){
 	if(isset($_POST['update'])){

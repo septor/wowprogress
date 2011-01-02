@@ -1,4 +1,5 @@
 <?php
+include_lan(e_PLUGIN."wowprogress/languages/".e_LANGUAGE.".php");
 
 //PLUGIN INFO------------------------------------------------------------------------------------------------+
 

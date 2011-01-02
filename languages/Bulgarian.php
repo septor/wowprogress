@@ -16,7 +16,7 @@ define("WPCONFIG_LAN009", "Героичен");
 define("WPCONFIG_LAN010", "Няма");
 define("WPCONFIG_LAN011", "Стил, използван за заглавията на случаите");
 define("WPCONFIG_LAN012", "Запиши настройките");
-define("WPCONFIG_LAN013", "Конфигурирай WoW Progression Меню");
+define("WPCONFIG_LAN013", "Конфигурирай WoW Прогресия Меню");
 
 
 // datapack.php
@@ -47,7 +47,7 @@ define("WPMANAGE_LAN012", "Не може да се управлявате про
 define("WPPLUGIN_LAN001", "World of Warcraft Шеф Прогресия Меню");
 define("WPPLUGIN_LAN002", "Конфигурирай WoW прогресия Меню");
 define("WPPLUGIN_LAN003", " е успешно инсталирано! Ако искате да инсталирате шефове и пакет случаи, ");
-define("WPPLUGIN_LAN004", "моля щракнете тук");
+define("WPPLUGIN_LAN004", "щракнете тук");
 
 // wowprogress_menu.php
 
@@ -57,6 +57,6 @@ define("WPMENU_LAN003", "Героичен Режим");
 define("WPMENU_LAN004", "Не е Убиван");
 define("WPMENU_LAN005", "Опит");
 define("WPMENU_LAN006", "Убити");
-define("WPMENU_LAN007", "прогрес на Нападение");
+define("WPMENU_LAN007", "Прогрес на Нападение");
 
 ?>

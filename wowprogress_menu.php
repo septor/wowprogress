@@ -2,6 +2,7 @@
 
 if (!defined('e107_INIT')) { exit; }
 
+include_lan(e_PLUGIN."wowprogress/languages/".e_LANGUAGE.".php");
 define("WOWPROG", e_PLUGIN."wowprogress/");
 
 $text = WPMENU_LAN001."<br /><br />";
