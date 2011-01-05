@@ -9,6 +9,13 @@ $text = WPMENU_LAN001."<br /><br />";
 
 $sql->db_Select("wowprogress_instances", "*") or die(mysql_error());
 
+$heroic_image = (file_exists(THEME."images/heroic.gif") ? THEME."images/heroic.gif" : WOWPROG."images/heroic.gif");
+$normal_image = (file_exists(THEME."images/normal.gif") ? THEME."images/normal.gif" : WOWPROG."images/normal.gif");
+
+$notkilled_image = (file_exists(THEME."images/notkilled.png") ? THEME."images/notkilled.png" : WOWPROG."images/notkilled.png");
+$killed_image = (file_exists(THEME."images/killed.png") ? THEME."images/killed.png" : WOWPROG."images/killed.png");
+$attempting_image = (file_exists(THEME."images/attempting.png") ? THEME."images/attempting.png" : WOWPROG."images/attempting.png");
+
 $sql3 = new db();
 $sql4 = new db();
 
@@ -40,8 +47,8 @@ while($row = $sql->db_Fetch()){
 		<table style='width:90%; display:none;' id='".$row['zoneid']."'>
 		<tr>
 		<td style='width: 70%;'>&nbsp;</td>
-		<td style='text-align:center;'><img src='".WOWPROG."images/normal.gif' title='".WPMENU_LAN002."' /></td>
-		".($row['heroic'] == "1" ? "<td style='text-align:center;'><img src='".WOWPROG."images/heroic.gif' title='".WPMENU_LAN003."' /></td>" : "")."
+		<td style='text-align:center;'><img src='".$normal_image."' title='".WPMENU_LAN002."' /></td>
+		".($row['heroic'] == "1" ? "<td style='text-align:center;'><img src='".$heroic_image."' title='".WPMENU_LAN003."' /></td>" : "")."
 		</tr>";
 
 		$sql4->db_Select("wowprogress_bosses", "*", "instance='".addslashes($row['zonename'])."'") or die(mysql_error());
@@ -49,19 +56,19 @@ while($row = $sql->db_Fetch()){
 
 		while($row2 = $sql4->db_Fetch()){
 			if($row2['status'] == "0"){
-				$status = "<img src='".WOWPROG."images/notkilled.png' title='".WPMENU_LAN004."' />";
+				$status = "<img src='".$notkilled_image."' title='".WPMENU_LAN004."' />";
 			}else if($row2['status'] == "1"){
-				$status = "<img src='".WOWPROG."images/attempting.png' title='".WPMENU_LAN005."' />";
+				$status = "<img src='".$attempting_image."' title='".WPMENU_LAN005."' />";
 			}else if($row2['status'] == "2"){
-				$status = "<img src='".WOWPROG."images/killed.png' title='".WPMENU_LAN006."' />";
+				$status = "<img src='".$killed_image."' title='".WPMENU_LAN006."' />";
 			}
 
 			if($row2['heroic'] == "0"){
-				$heroic = "<img src='".WOWPROG."images/notkilled.png' title='".WPMENU_LAN004."' />";
+				$heroic = "<img src='".$notkilled_image."' title='".WPMENU_LAN004."' />";
 			}else if($row2['heroic'] == "1"){
-				$heroic = "<img src='".WOWPROG."images/attempting.png' title='".WPMENU_LAN005."' />";
+				$heroic = "<img src='".$attempting_image."' title='".WPMENU_LAN005."' />";
 			}else if($row2['heroic'] == "2"){
-				$heroic = "<img src='".WOWPROG."images/killed.png' title='".WPMENU_LAN006."' />";
+				$heroic = "<img src='".$killed_image."' title='".WPMENU_LAN006."' />";
 			}
 
 			$text .= "<tr>
