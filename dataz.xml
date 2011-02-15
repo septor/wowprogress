@@ -50,7 +50,7 @@
 		<boss name="Argaloth" type="npc" id="47120" />
 	</instance>
 
-	<instance name="Blackwing Descent" id="5094" heroic="0">
+	<instance name="Blackwing Descent" id="5094" heroic="1">
 		<boss name="Magmaw" type="npc" id="41570" />
 		<boss name="Omintron Defense System" type="npc" id="42180" />
 		<boss name="Maloriak" type="npc" id="41378" />
@@ -59,7 +59,7 @@
 		<boss name="Nefarian" type="npc" id="41376" />
 	</instance>
 
-	<instance name="The Bastion of Twilight" id="5334" heroic="0">
+	<instance name="The Bastion of Twilight" id="5334" heroic="1">
 		<boss name="Valiona" type="npc" id="45992" />
 		<boss name="Theralion" type="npc" id="45993" />
 		<boss name="Halfus Wyrmbreaker" type="npc" id="44600" />
