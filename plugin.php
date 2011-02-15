@@ -4,7 +4,7 @@ include_lan(e_PLUGIN."wowprogress/languages/".e_LANGUAGE.".php");
 //PLUGIN INFO------------------------------------------------------------------------------------------------+
 
 $eplug_name        = "WoW Progression Menu";
-$eplug_version     = "0.1";
+$eplug_version     = "0.2";
 $eplug_author      = "Patrick Weaver";
 $eplug_url         = "http://painswitch.com/";
 $eplug_email       = "patrickweaver@gmail.com";
