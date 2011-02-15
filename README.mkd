@@ -1,3 +1,9 @@
+# Notes
+
+If you are upgrading from 0.1 to 0.2 and have the BoT and BWD instances loaded you'll need to run the `bot_bwd_fix.php` file to allow for heroic modes. Delete it after it's been ran.
+
+If you download wowprogress directly from the repo you need to rename the directory you're given to `wowprogress` in order for it to work correctly in e107.
+
 # WoW Progression Menu
 
 Allows you to show off which kills your guild has made.
