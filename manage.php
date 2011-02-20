@@ -14,14 +14,14 @@ if(check_class($pref['wowprogress_manageclass'])){
 		while (list($key, $id) = each($_POST['status']))
 		{
 			$tmp = explode(".", $id);
-			$sql->db_Update("wowprogress_bosses", "status=".$tmp[0]." WHERE id=".$tmp[1]);
+			$sql->db_Update("wowprogress_bosses", "status=".intval($tmp[0])." WHERE id=".intval($tmp[1]));
 		}
 		if(isset($_POST['heroic'])){
 			extract($_POST);
 			while (list($key2, $id2) = each($_POST['heroic']))
 			{
 				$tmp2 = explode(".", $id2);
-				$sql->db_Update("wowprogress_bosses", "heroic=".$tmp2[0]." WHERE id=".$tmp2[1]);
+				$sql->db_Update("wowprogress_bosses", "heroic=".intval($tmp2[0])." WHERE id=".intval($tmp2[1]));
 			}
 		}
 		$message = WPMANAGE_LAN001;
@@ -47,7 +47,7 @@ if(check_class($pref['wowprogress_manageclass'])){
 		".($row['heroic'] == "1" ? "<td class='forumheader3' style='text-align:center;'><b>".WPMANAGE_LAN004."</b></td>" : "")."
 		</tr>";
 
-		$sql2->db_Select("wowprogress_bosses", "*", "instance='".addslashes($row['zonename'])."'") or die(mysql_error());
+		$sql2->db_Select("wowprogress_bosses", "*", "instance='".$tp->toDB($row['zonename'])."'") or die(mysql_error());
 
 		while($row2 = $sql2->db_Fetch()){
 			$text .= "<tr>

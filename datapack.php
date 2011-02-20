@@ -18,7 +18,7 @@ if(file_exists(e_PLUGIN."wowprogress/dataz.xml")){
 		// if the instance isn't already in the database...
 		if($sql->db_Count("wowprogress_instances", "(*)", "WHERE zonename='".addslashes($instance['name'])."'") == 0){
 			// ... add it
-			$sql->db_Insert("wowprogress_instances", "'', '".$instance['id']."', '".addslashes($instance['name'])."', '".$instance['heroic']."'") or die(mysql_error());
+			$sql->db_Insert("wowprogress_instances", "'', '".$instance['id']."', '".$tp->toDB($instance['name'])."', '".$instance['heroic']."'") or die(mysql_error());
 			$iAdded++;
 		}
 
@@ -27,7 +27,7 @@ if(file_exists(e_PLUGIN."wowprogress/dataz.xml")){
 			// if the boss isn't already in the database...
 			if($sql->db_Count("wowprogress_bosses", "(*)", "WHERE bossname='".addslashes($boss['name'])."'") == 0){
 				$heroic_status = ($instance['heroic'] == "1" ? "0" : "");
-				$sql->db_Insert("wowprogress_bosses", "'', '".$boss['id']."', '".$boss['type']."', '".addslashes($boss['name'])."', '".addslashes($instance['name'])."', '0', '".$heroic_status."'") or die(mysql_error());
+				$sql->db_Insert("wowprogress_bosses", "'', '".$boss['id']."', '".$boss['type']."', '".$tp->toDB($boss['name'])."', '".$tp->toDB($instance['name'])."', '0', '".$heroic_status."'") or die(mysql_error());
 				$bAdded++;
 			}
 		}
