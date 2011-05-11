@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <datapack>
 	
-	<version>02152011</version>
+	<version>05102011</version>
 
 	<instance name="Gruul's Lair" id="3923" heroic="0">
 		<boss name="High King Maulgar" type="npc" id="18831" />
@@ -71,5 +71,16 @@
 		<boss name="Conclave of Wind" type="npc" id="45871" />
 		<boss name="Al'Akir" type="npc" id="46753" />
 	</instance>
+	
+	<instance name="Firelands" id="5723" heroic="1">
+		<boss name="Beth'tilac" type="npc" id="52498" />
+		<boss name="Aysrazor" type="npc" id="52530" />
+		<boss name="Lord Rhyolith" type="npc" id="52558" />
+		<boss name="Shannox" type="npc" id="53691" />
+		<boss name="Baleroc" type="npc" id="53494" />
+		<boss name="Majordomo Fandral Staghelm" type="npc" id="52571" />
+		<boss name="Ragnaros" type="npc" id="52409" />
+	</instance>
+		
 
 </datapack>
