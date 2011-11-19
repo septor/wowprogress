@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <datapack>
 	
-	<version>05102011</version>
+	<version>11182011</version>
 
 	<instance name="Gruul's Lair" id="3923" heroic="0">
 		<boss name="High King Maulgar" type="npc" id="18831" />
@@ -48,6 +48,7 @@
 
 	<instance name="Baradin Hold" id="5600" heroic="0">
 		<boss name="Argaloth" type="npc" id="47120" />
+		<boss name="Occu'thar" type="npc" id="52363" />
 	</instance>
 
 	<instance name="Blackwing Descent" id="5094" heroic="1">
@@ -65,6 +66,7 @@
 		<boss name="Halfus Wyrmbreaker" type="npc" id="44600" />
 		<boss name="Twilight Ascendant Council" type="npc" id="43735" />
 		<boss name="Cho'gall" type="npc" id="43324" />
+		<boss name="Sinestra" type="npc" id="45213" />
 	</instance>
 
 	<instance name="Throne of the Four Winds" id="5638" heroic="1">
@@ -81,6 +83,5 @@
 		<boss name="Majordomo Fandral Staghelm" type="npc" id="52571" />
 		<boss name="Ragnaros" type="npc" id="52409" />
 	</instance>
-		
 
 </datapack>
