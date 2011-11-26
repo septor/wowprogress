@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <datapack>
 	
-	<version>11182011</version>
+	<version>11262011</version>
 
 	<instance name="Gruul's Lair" id="3923" heroic="0">
 		<boss name="High King Maulgar" type="npc" id="18831" />
 		<boss name="Gruul the Dragonkiller" type="npc" id="19044" />
+	</instance>
+	
+	<instance name="Magtheridon's Lair" id="3836" heroic="0">
+		<boss name="Magtheridon" type="npc" id="17257" />
 	</instance>
 
 	<instance name="Vault of Archavon" id="4603" heroic="0">
@@ -49,6 +53,7 @@
 	<instance name="Baradin Hold" id="5600" heroic="0">
 		<boss name="Argaloth" type="npc" id="47120" />
 		<boss name="Occu'thar" type="npc" id="52363" />
+		<boss name="Alizabal" type="npc" id="55869" />
 	</instance>
 
 	<instance name="Blackwing Descent" id="5094" heroic="1">
@@ -82,6 +87,17 @@
 		<boss name="Baleroc" type="npc" id="53494" />
 		<boss name="Majordomo Fandral Staghelm" type="npc" id="52571" />
 		<boss name="Ragnaros" type="npc" id="52409" />
+	</instance>
+	
+	<instance name="Dragon Soul" id="5892" heroic="1">
+		<boss name="Morchok" type="npc" id="55265" />
+		<boss name="Warlord Zon'ozz" type="npc" id="55308" />
+		<boss name="Yor'sahj the Unsleeping" type="npc" id="55312" />
+		<boss name="Hagara the Stormbinder" type="npc" id="55689" />
+		<boss name="Ultraxion" type="npc" id="55294" />
+		<boss name="Warmaster Blackhorn" type="npc" id="56427" />
+		<boss name="Spine of Deathwing" type="npc" id="0" />
+		<boss name="Madness of Deathwing" type="npc" id="0" />
 	</instance>
 
 </datapack>
