@@ -22,9 +22,9 @@ $sql4 = new db();
 while($row = $sql->db_Fetch()){
 	$showinstances = explode(" ", $pref['wowprogress_showinstances']);
 	if(in_array($row['id'], $showinstances)){
-		$bosses = $sql3->db_Count("wowprogress_bosses", "(*)", "WHERE instance='".$tp->toDB($row['zonename'])."'");
-		$nkilled = $sql3->db_Count("wowprogress_bosses", "(*)", "WHERE instance='".$tp->toDB($row['zonename'])."' AND status='2'");
-		$hkilled = $sql3->db_Count("wowprogress_bosses", "(*)", "WHERE instance='".$tp->toDB($row['zonename'])."' AND heroic='2'");
+		$bosses = $sql3->db_Count("wowprogress_bosses", "(*)", "WHERE instance='".$row['zonename']."'");
+		$nkilled = $sql3->db_Count("wowprogress_bosses", "(*)", "WHERE instance='".$row['zonename']."' AND status='2'");
+		$hkilled = $sql3->db_Count("wowprogress_bosses", "(*)", "WHERE instance='".$row['zonename']."' AND heroic='2'");
 
 		if($pref['wowprogress_killstyle'] == "total"){
 			if($row['heroic'] == "1"){
@@ -51,7 +51,7 @@ while($row = $sql->db_Fetch()){
 		".($row['heroic'] == "1" ? "<td style='text-align:center;'><img src='".$heroic_image."' title='".WPMENU_LAN003."' /></td>" : "")."
 		</tr>";
 
-		$sql4->db_Select("wowprogress_bosses", "*", "instance='".$tp->toDB($row['zonename'])."'") or die(mysql_error());
+		$sql4->db_Select("wowprogress_bosses", "*", "instance='".$row['zonename']."'") or die(mysql_error());
 		
 
 		while($row2 = $sql4->db_Fetch()){

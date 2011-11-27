@@ -2,7 +2,6 @@
 
 // compatible with 0.1 and under
 
-
 // admin_config.php
 define("WPCONFIG_LAN001", "Settings saved successfully!");
 define("WPCONFIG_LAN002", "Who can manage the boss kills?");
@@ -18,7 +17,6 @@ define("WPCONFIG_LAN011", "Styling to use for the instance titles");
 define("WPCONFIG_LAN012", "Save Settings");
 define("WPCONFIG_LAN013", "Configure WoW Progression Menu");
 
-
 // datapack.php
 define("WPDPACK_LAN001", "You have successfully added ");
 define("WPDPACK_LAN002", " instance(s) and ");
@@ -28,6 +26,8 @@ define("WPDPACK_LAN005", "WoW Progress Datapack");
 define("WPDPACK_LAN006", "WoW Progress Datapack NOT FOUND!");
 define("WPDPACK_LAN007", "You don't appear to have a dataz.xml file in your possession");
 define("WPDPACK_LAN008", "Please grab the latest copy and re-run this script!");
+define("WPDPACK_LAN009", "There have also been ");
+define("WPDPACK_LAN010", " fix(es) applied to your existing dataz.");
 
 // manage.php
 define("WPMANAGE_LAN001", "Updated progression statuses successfully!");
@@ -42,6 +42,7 @@ define("WPMANAGE_LAN009", "Reset");
 define("WPMANAGE_LAN010", "Manage Progression");
 define("WPMANAGE_LAN011", "Error!");
 define("WPMANAGE_LAN012", "You aren't able to manage progression. Speak to your guild master!");
+define("WPMANAGE_LAN013", "Killed In Patch");
 
 // plugin.php
 define("WPPLUGIN_LAN001", "World of Warcraft Boss Progression Menu");

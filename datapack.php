@@ -14,9 +14,10 @@ if(file_exists(e_PLUGIN."wowprogress/dataz.xml")){
 	// add the dataz!
 	$iAdded = 0;
 	$bAdded = 0;
+	$dbFixes = 0;
 	foreach($dp->instance as $instance){
 		// if the instance isn't already in the database...
-		if($sql->db_Count("wowprogress_instances", "(*)", "WHERE zonename='".addslashes($instance['name'])."'") == 0){
+		if($sql->db_Count("wowprogress_instances", "(*)", "WHERE zonename='".$tp->toDB($instance['name'])."'") == 0){
 			// ... add it
 			$sql->db_Insert("wowprogress_instances", "'', '".$instance['id']."', '".$tp->toDB($instance['name'])."', '".$instance['heroic']."'") or die(mysql_error());
 			$iAdded++;
@@ -25,23 +26,37 @@ if(file_exists(e_PLUGIN."wowprogress/dataz.xml")){
 		// now the bosses!
 		foreach($instance->boss as $boss){
 			// if the boss isn't already in the database...
-			if($sql->db_Count("wowprogress_bosses", "(*)", "WHERE bossname='".addslashes($boss['name'])."'") == 0){
+			if($sql->db_Count("wowprogress_bosses", "(*)", "WHERE bossname='".$tp->toDB($boss['name'])."'") == 0){
 				$heroic_status = ($instance['heroic'] == "1" ? "0" : "");
-				$sql->db_Insert("wowprogress_bosses", "'', '".$boss['id']."', '".$boss['type']."', '".$tp->toDB($boss['name'])."', '".$tp->toDB($instance['name'])."', '0', '".$heroic_status."'") or die(mysql_error());
+				$sql->db_Insert("wowprogress_bosses", "'', '".$boss['id']."', '".$boss['type']."', '".$tp->toDB($boss['name'])."', '".$tp->toDB($instance['name'])."', '0', '".$heroic_status."', 'null'") or die(mysql_error());
 				$bAdded++;
 			}
 		}
 
 	}
+	
+	// bot_bwd fixes -- this eliminates the need to run the extra file
+	// this will probably be removed in the next release
+	if($sql->db_Count("wowprogress_instances", "(*)", "WHERE zonename='Blackwing Descent' AND heroic='0'") == 1){
+		$sql->db_Update("wowprogress_instances", "heroic='1' WHERE zonename='Blackwing Descent'");
+		$dbFixes++;
+	}
+	if($sql->db_Count("wowprogress_instances", "(*)", "WHERE zonename='The Bastion of Twilight' AND heroic='0'") == 1){
+		$sql->db_Update("wowprogress_instances", "heroic='1' WHERE zonename='The Bastion of Twilight'");
+		$dbFixes++;
+	}
+	// end of fix
 
 	$text = "<div style='text-align:center;'>
-	".WPDPACK_LAN001.$iAdded.WPDPACK_LAN002.$bAdded.WPDPACK_LAN003."<br /><br />
+	".WPDPACK_LAN001.$iAdded.WPDPACK_LAN002.$bAdded.WPDPACK_LAN003."<br />
+	".($dbFixes > 0 ? WPDPACK_LAN009.$dbFixes.WPDPACK_LAN010."<br />" : "")."
+	<br />
 	<a href='".e_PLUGIN."wowprogress/manage.php'>".WPDPACK_LAN004."</a>
 	</div>";
 
 	$ns->tablerender(WPDPACK_LAN005." v".$dp->version, $text);
 
-	unset($iAdded, $bAdded);
+	unset($iAdded, $bAdded, $dbFixes);
 
 }else{
 

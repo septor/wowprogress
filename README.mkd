@@ -1,7 +1,5 @@
 # Notes
 
-If you are upgrading from 0.1 to 0.2 and have the BoT and BWD instances loaded you'll need to run the `bot_bwd_fix.php` file to allow for heroic modes. Delete it after it's been ran.
-
 If you download wowprogress directly from the repo you need to rename the directory you're given to `wowprogress` in order for it to work correctly in e107.
 
 # WoW Progression Menu
@@ -38,6 +36,12 @@ Yes. If an instance supports heroic modes you can define whether or not you have
 
 There are no defines to say one way or the other. Generally guilds only focus on one raiding style, so the need (in my opinion) to show off which version you have killed is pointless.
 In the future, however, if it's requested enough I'll see about adding support for both in.
+
+## I need to show how elite we are! Can I display which patch I killed a boss in?
+
+You can select which patch a boss was killed in while managing it.
+
+This information is **not** displayed on the menu, but will be displayed on the upcoming `progress.php` page, so get that information added!
 
 # Translations
 
