@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <datapack>
 	
-	<version>11262011</version>
+	<version>11292011</version>
 
 	<instance name="Gruul's Lair" id="3923" heroic="0">
 		<boss name="High King Maulgar" type="npc" id="18831" />
@@ -96,8 +96,8 @@
 		<boss name="Hagara the Stormbinder" type="npc" id="55689" />
 		<boss name="Ultraxion" type="npc" id="55294" />
 		<boss name="Warmaster Blackhorn" type="npc" id="56427" />
-		<boss name="Spine of Deathwing" type="npc" id="0" />
-		<boss name="Madness of Deathwing" type="npc" id="0" />
+		<boss name="Spine of Deathwing" type="npc" id="53879" />
+		<boss name="Madness of Deathwing" type="npc" id="56173" />
 	</instance>
 
 </datapack>
