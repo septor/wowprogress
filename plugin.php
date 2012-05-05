@@ -3,7 +3,7 @@ include_lan(e_PLUGIN."wowprogress/languages/".e_LANGUAGE.".php");
 
 // -- [ PLUGIN INFO ]
 $eplug_name        = "WoW Progression Menu";
-$eplug_version     = "0.3";
+$eplug_version     = "0.4";
 $eplug_author      = "Patrick Weaver";
 $eplug_url         = "http://painswitch.com/";
 $eplug_email       = "patrickweaver@gmail.com";
@@ -41,6 +41,7 @@ $eplug_tables = array(
 		status int(10) unsigned NOT NULL default '0',
 		heroic int(10) unsigned NOT NULL,
 		patch varchar(250) NOT NULL default 'null',
+		hpatch varchar(250) NOT NULL default 'null',
 		PRIMARY KEY  (id)
 	) TYPE=MyISAM AUTO_INCREMENT=1;",
 
@@ -65,7 +66,8 @@ $eplug_done = $eplug_name." ".WPPLUGIN_LAN003."<a href='".e_PLUGIN."wowprogress/
 $upgrade_add_prefs    = "";
 $upgrade_remove_prefs = "";
 $upgrade_alter_tables = array(
-	"ALTER TABLE ".MPREFIX."wowprogress_bosses ADD patch varchar(250) NOT NULL default 'null';"
+	"ALTER TABLE  ".MPREFIX."wowprogress_bosses  ADD  `patch` VARCHAR( 250 ) NOT NULL DEFAULT  'null',
+	ADD  `hpatch` VARCHAR( 250 ) NOT NULL DEFAULT  'null'"
 );
 $eplug_upgrade_done   = $eplug_name." has been successfully upgraded.";
 

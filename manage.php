@@ -31,6 +31,13 @@ if(check_class($pref['wowprogress_manageclass'])){
 			$tmp3 = explode("_", $id3);
 			$sql->db_Update("wowprogress_bosses", "patch='".$tp->toDB($tmp3[1])."' WHERE id=".intval($tmp3[0]));
 		}
+		
+		extract($_POST);
+		while (list($key4, $id4) = each($_POST['hpatch']))
+		{
+			$tmp4 = explode("_", $id4);
+			$sql->db_Update("wowprogress_bosses", "hpatch='".$tp->toDB($tmp4[1])."' WHERE id=".intval($tmp4[0]));
+		}
 
 		$message = WPMANAGE_LAN001;
 	}
@@ -40,19 +47,20 @@ if(check_class($pref['wowprogress_manageclass'])){
 
 	$text = "<div style='text-align:center'>";
 	
-	$sql->db_Select("wowprogress_instances", "*") or die(mysql_error());
+	$sql->db_Select("wowprogress_instances", "*", "ORDER BY id DESC", "no-where") or die(mysql_error());
 
 	while($row = $sql->db_Fetch()){
 		$text .= "<form method='post' name='instance' action='".e_SELF."'>
 		<table style='width:75%' class='fborder'>
 		<tr>
-		<td colspan='".($row['heroic'] == "1" ? "4" : "3")."' class='fcaption' style='text-align:center;'><b><u>".$row['zonename']."</u></b></td>
+		<td colspan='".($row['heroic'] == "1" ? "5" : "3")."' class='fcaption' style='text-align:center;'><b><u>".$row['zonename']."</u></b></td>
 		</tr>
 		<tr>
-		<td class='forumheader3' style='width:65%'><b>".WPMANAGE_LAN002."</b></td>
+		<td class='forumheader3' style='width:55%'><b>".WPMANAGE_LAN002."</b></td>
 		<td class='forumheader3' style='text-align:center;'><b>".WPMANAGE_LAN003."</b></td>
-		".($row['heroic'] == "1" ? "<td class='forumheader3' style='text-align:center;'><b>".WPMANAGE_LAN004."</b></td>" : "")."
 		<td class='forumheader3' style='text-align:center;'><b>".WPMANAGE_LAN013."</b></td>
+		".($row['heroic'] == "1" ? "<td class='forumheader3' style='text-align:center;'><b>".WPMANAGE_LAN004."</b></td>
+		<td class='forumheader3' style='text-align:center;'><b>".WPMANAGE_LAN014."</b></td>" : "")."
 		</tr>";
 
 		$sql2->db_Select("wowprogress_bosses", "*", "instance='".$tp->toDB($row['zonename'])."'") or die(mysql_error());
@@ -68,14 +76,6 @@ if(check_class($pref['wowprogress_manageclass'])){
 			</select>
 			</td>
 			
-			".($row['heroic'] == "1" ? "<td class='forumheader3' style='text-align:center;'>
-			<select name='heroic[]' class='tbox'>
-			<option value='0.".$row2['id']."'".($row2['heroic'] == "0" ? " selected" : "").">".WPMANAGE_LAN005."</option>
-			<option value='1.".$row2['id']."'".($row2['heroic'] == "1" ? " selected" : "").">".WPMANAGE_LAN006."</option>
-			<option value='2.".$row2['id']."'".($row2['heroic'] == "2" ? " selected" : "").">".WPMANAGE_LAN007."</option>
-			</select>
-			</td>" : "")."
-			
 			<td class='forumheader3' style='text-align:center;'>
 			<select name='patch[]' class='tbox'>
 			<option value='".$row2['id']."_null'".($tp->toHTML($row2['patch']) == "null" ? " selected='selected'" : "").">---</option>\n";
@@ -84,13 +84,33 @@ if(check_class($pref['wowprogress_manageclass'])){
 			}
 			$text .= "
 			</select>
-			</td>
-			</tr>";
+			</td>";
+			
+			if($row['heroic'] == "1"){
+				$text .= "<td class='forumheader3' style='text-align:center;'>
+				<select name='heroic[]' class='tbox'>
+				<option value='0.".$row2['id']."'".($row2['heroic'] == "0" ? " selected" : "").">".WPMANAGE_LAN005."</option>
+				<option value='1.".$row2['id']."'".($row2['heroic'] == "1" ? " selected" : "").">".WPMANAGE_LAN006."</option>
+				<option value='2.".$row2['id']."'".($row2['heroic'] == "2" ? " selected" : "").">".WPMANAGE_LAN007."</option>
+				</select>
+				</td>
+				<td class='forumheader3' style='text-align:center;'>
+				<select name='hpatch[]' class='tbox'>
+				<option value='".$row2['id']."_null'".($tp->toHTML($row2['hpatch']) == "null" ? " selected='selected'" : "").">---</option>\n";
+				foreach($patches as $key => $patch){
+					$text .= "<option value='".$row2['id']."_".$patch."'".($tp->toHTML($row2['hpatch']) == $patch ? " selected='selected'" : "").">".$patch."</option>\n";
+				}
+				$text .= "
+				</select>
+				</td>";
+			}
+			
+			$text .= "</tr>";
 		}
 
 		$text .= "
 		<tr>
-		<td colspan='".($row['heroic'] == "1" ? "4" : "3")."' class='fcaption' style='text-align:center;'>
+		<td colspan='".($row['heroic'] == "1" ? "5" : "3")."' class='fcaption' style='text-align:center;'>
 		<input type='submit' class='button' name='update[]' value=\"".WPMANAGE_LAN008.$row['zonename']."\">
 		<input type='reset' class='button' value='".WPMANAGE_LAN009."'>
 		</td>
