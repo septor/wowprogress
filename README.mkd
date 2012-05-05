@@ -39,9 +39,13 @@ In the future, however, if it's requested enough I'll see about adding support f
 
 ## I need to show how elite we are! Can I display which patch I killed a boss in?
 
-You can select which patch a boss was killed in while managing it.
+You can select which patch a boss was killed (for both normal and heroic) in while managing it.
 
-This information is **not** displayed on the menu, but will be displayed on the upcoming `progress.php` page, so get that information added!
+This information is displayed, along with your entire raid kill progress, on the newly added `progress.php` page.
+
+## So, the menu item is cluttered with all the bosses I have displayed. I want to show off the kills our guild has made, but it's just too much!
+
+Excellent problem! To remedy this, you can now turn off all the older content you have downed on the menu item because it is now all displayed on the newly added `progress.php` page!
 
 # Translations
 

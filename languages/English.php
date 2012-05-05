@@ -1,6 +1,9 @@
 <?php
 
-// compatible with 0.1 and under
+// wowprogress language file
+// language:		English
+// author:			septor
+// compatible with:	0.4 and under
 
 // admin_config.php
 define("WPCONFIG_LAN001", "Settings saved successfully!");
@@ -42,7 +45,8 @@ define("WPMANAGE_LAN009", "Reset");
 define("WPMANAGE_LAN010", "Manage Progression");
 define("WPMANAGE_LAN011", "Error!");
 define("WPMANAGE_LAN012", "You aren't able to manage progression. Speak to your guild master!");
-define("WPMANAGE_LAN013", "Killed In Patch");
+define("WPMANAGE_LAN013", "Killed In Patch (normal)");
+define("WPMANAGE_LAN014", "Killed In Patch (heroic)");
 
 // plugin.php
 define("WPPLUGIN_LAN001", "World of Warcraft Boss Progression Menu");
@@ -51,7 +55,6 @@ define("WPPLUGIN_LAN003", " has been sucessfully installed! If you wish to insta
 define("WPPLUGIN_LAN004", "click here");
 
 // wowprogress_menu.php
-
 define("WPMENU_LAN001", "We have cleared the following:");
 define("WPMENU_LAN002", "Normal Mode");
 define("WPMENU_LAN003", "Heroic Mode");
@@ -59,5 +62,11 @@ define("WPMENU_LAN004", "Not Killed");
 define("WPMENU_LAN005", "Attempting");
 define("WPMENU_LAN006", "Killed");
 define("WPMENU_LAN007", "Raid Progress");
+
+// progress.php
+define("WPPROG_LAN001", "Normal Mode");
+define("WPPROG_LAN002", "Heroic Mode");
+define("WPPROG_LAN003", "Killed In Patch");
+define("WPPROG_LAN004", "Complete Raid Progress");
 
 ?>
