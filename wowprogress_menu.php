@@ -89,7 +89,7 @@ while($row = $sql->db_Fetch()){
 	
 }
 
-$text .= "<br /><br />\n<a href='".WOWPROG."progress.php'>All cleared content</a>.";
+$text .= "<br /><br />\n<a href='".WOWPROG."progress.php'>".WPMENU_LAN008."</a>.";
 
 $ns->tablerender(WPMENU_LAN007, $text);
 

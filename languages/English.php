@@ -62,6 +62,7 @@ define("WPMENU_LAN004", "Not Killed");
 define("WPMENU_LAN005", "Attempting");
 define("WPMENU_LAN006", "Killed");
 define("WPMENU_LAN007", "Raid Progress");
+define("WPMENU_LAN008", "All cleared content");
 
 // progress.php
 define("WPPROG_LAN001", "Normal Mode");
