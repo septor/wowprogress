@@ -42,7 +42,8 @@ define("WPMANAGE_LAN009", "Изчисти");
 define("WPMANAGE_LAN010", "Управлявай прогресията");
 define("WPMANAGE_LAN011", "Грешка!");
 define("WPMANAGE_LAN012", "Не може да се управлявате прогресията. Свържете се с Вашия Шеф на Гилдията!");
-define("WPMANAGE_LAN013", "Killed In Patch");
+define("WPMANAGE_LAN013", "Killed In Patch (normal)");
+define("WPMANAGE_LAN014", "Killed In Patch (heroic)");
 
 // plugin.php
 define("WPPLUGIN_LAN001", "World of Warcraft Шеф Прогресия Меню");
@@ -51,7 +52,6 @@ define("WPPLUGIN_LAN003", " е успешно инсталирано! Ако и�
 define("WPPLUGIN_LAN004", "щракнете тук");
 
 // wowprogress_menu.php
-
 define("WPMENU_LAN001", "Изчистихме следното:");
 define("WPMENU_LAN002", "Нормален Режим");
 define("WPMENU_LAN003", "Героичен Режим");
@@ -59,5 +59,12 @@ define("WPMENU_LAN004", "Не е Убиван");
 define("WPMENU_LAN005", "Опит");
 define("WPMENU_LAN006", "Убити");
 define("WPMENU_LAN007", "Прогрес на Нападение");
+define("WPMENU_LAN008", "All cleared content");
+
+// progress.php
+define("WPPROG_LAN001", "Normal Mode");
+define("WPPROG_LAN002", "Heroic Mode");
+define("WPPROG_LAN003", "Killed In Patch");
+define("WPPROG_LAN004", "Complete Raid Progress");
 
 ?>
