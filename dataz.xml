@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <datapack>
 	
-	<version>11292011</version>
+	<version>05062012</version>
 
+	<instance name="The Eye" id="3845" heroic="0">
+		<boss name="Void Reaver" type="npc" id="19516" />
+		<boss name="Al'ar" type="npc" id="19514" />
+		<boss name="High Astromancer Solarian" type="npc" id="18805" />
+		<boss name="Kael'thas Sunstrider" type="npc" id="19622" />
+	</instance>
+	
+	<instance name="Hyjal Summit" id="3606" heroic="0">
+		<boss name="Rage Winterchill" type="npc" id="17767" />
+		<boss name="Anetheron" type="npc" id="17808" />
+		<boss name="Kaz'rogal" type="npc" id="17888" />
+		<boss name="Azgalor" type="npc" id="17842" />
+		<boss name="Archimonde" type="npc" id="17968" />
+	</instance>
+	
+	<instance name="Serpentshrine Cavern" id="3607" heroic="0">
+		<boss name="Hydross the Unstable" type="npc" id="21216" />
+		<boss name="The Lurker Below" type="npc" id="21217" />
+		<boss name="Leotheras the Blind" type="npc" id="21215" />
+		<boss name="Fathom-Lord Karathress" type="npc" id="21214" />
+		<boss name="Morogrim Tidewalker" type="npc" id="21213" />
+		<boss name="Lady Vashj" type="npc" id="21212" />
+	</instance>
+	
 	<instance name="Gruul's Lair" id="3923" heroic="0">
 		<boss name="High King Maulgar" type="npc" id="18831" />
 		<boss name="Gruul the Dragonkiller" type="npc" id="19044" />
