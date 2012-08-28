@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <datapack>
 	
-	<version>05062012</version>
+	<version>08272012</version>
 
 	<instance name="The Eye" id="3845" heroic="0">
 		<boss name="Void Reaver" type="npc" id="19516" />
@@ -122,6 +122,34 @@
 		<boss name="Warmaster Blackhorn" type="npc" id="56427" />
 		<boss name="Spine of Deathwing" type="npc" id="53879" />
 		<boss name="Madness of Deathwing" type="npc" id="56173" />
+	</instance>
+
+	<instance name="Heart of Fear" id="6279" heroic="1">
+		<boss name="Imperial Vizier Zor'lok" type="npc" id="66791" />
+		<boss name="Blade Lord Ta'yak" type="npc" id="62543" />
+		<boss name="Garalon" type="npc" id="62164" />
+		<boss name="Wind Lord Mel'jarak" type="npc" id="65501" />
+		<boss name="Amber-Shaper Un'sok" type="npc" id="63666" />
+		<boss name="Grand Empress Shek'zeer" type="npc" id="56427" />
+	</instance>
+
+	<instance name="Mogu'shan Vaults" id="6125" heroic="1">
+		<boss name="The Stone Guard" type="npc" id="60047" />
+		<boss name="Feng the Accursed" type="npc" id="60009" />
+		<boss name="Gara'jal the Spiritbinder" type="npc" id="60143" />
+		<boss name="The Spirit Kings" type="npc" id="61429" />
+		<boss name="Elegon" type="npc" id="60410" />
+		<boss name="Will of the Emporer" type="npc" id="60400" />
+	</instance>
+
+	<instance name="Terrace of Endless Spring" id="6067" heroic="1">
+		<boss name="Protectors of the Endless" type="npc" id="60583" />
+		<boss name="Sha of Anger" type="npc" id="60491" />
+		<boss name="Salyis's Warband" type="npc" id="62346" />
+		<boss name="Tsulong " type="npc" id="62442" />
+		<boss name="Lei Shi" type="npc" id="63099" />
+		<boss name="Sha of Fear" type="npc" id="60999" />
+
 	</instance>
 
 </datapack>
