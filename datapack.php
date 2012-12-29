@@ -34,18 +34,6 @@ if(file_exists(e_PLUGIN."wowprogress/dataz.xml")){
 		}
 
 	}
-	
-	// bot_bwd fixes -- this eliminates the need to run the extra file
-	// this will probably be removed in the next release
-	if($sql->db_Count("wowprogress_instances", "(*)", "WHERE zonename='Blackwing Descent' AND heroic='0'") == 1){
-		$sql->db_Update("wowprogress_instances", "heroic='1' WHERE zonename='Blackwing Descent'");
-		$dbFixes++;
-	}
-	if($sql->db_Count("wowprogress_instances", "(*)", "WHERE zonename='The Bastion of Twilight' AND heroic='0'") == 1){
-		$sql->db_Update("wowprogress_instances", "heroic='1' WHERE zonename='The Bastion of Twilight'");
-		$dbFixes++;
-	}
-	// end of fix
 
 	$text = "<div style='text-align:center;'>
 	".WPDPACK_LAN001.$iAdded.WPDPACK_LAN002.$bAdded.WPDPACK_LAN003."<br />
